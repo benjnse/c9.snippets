@@ -1,0 +1,9 @@
+# scope: coldfusion
+snippet cfdump
+	<cfdump top="2" var="#${1:variable}#" />
+	$0
+	
+snippet cfloop
+	<cfloop array="#${1:array}#" item="#${2:item}#" ${3:index="index"}>
+		$0
+	</cfloop>
