@@ -15,3 +15,5 @@ services.pluginManager.loadPackage([
 ```
 
 ## Refresh your browser
+Test by opening a Javascript file, type "test", then press tab.
+You can easily add more to the snippets to the files (must use tabs for indentation).
