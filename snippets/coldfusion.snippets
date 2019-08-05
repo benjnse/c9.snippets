@@ -4,6 +4,9 @@ snippet cfdump
 	$0
 	
 snippet cfloop
-	<cfloop array="#${1:array}#" item="#${2:item}#" ${3:index="index"}>
+	<cfloop array="#${1:array}#" item="#${2:item}#" ${3:index="${4:index}"}>
 		$0
 	</cfloop>
+	
+snippet cfrbkey
+	#$.slatwall.rbkey('${1:key}')#$0
