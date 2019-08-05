@@ -10,7 +10,7 @@ AWS Cloud 9 > Open Your Init Script
 services["language.complete"] = services["languageComplete"];
 
 services.pluginManager.loadPackage([
-    "~/.c9/plugins/myPlugin/package.json",
+    "~/.c9/plugins/c9.snippets/package.json",
 ])
 ```
 
