@@ -1,4 +1,11 @@
 # scope: coldfusion
 	
 snippet mta
-	#$.siteConfig('themeAssetPath')#
+	$.siteConfig('themeAssetPath')$$0
+snippet #mta
+	#$.siteConfig('themeAssetPath')$#$0
+
+snippet murl
+	m.createHREF(filename='${1:filename}')$0
+snippet #murl
+	#m.createHREF(filename='${1:filename}')#$0

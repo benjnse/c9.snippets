@@ -1,14 +1,46 @@
 # scope: coldfusion
+
+
+# element attr
+snippet elemAttr
+regex /^\s*/([a-z]+)(\[([a-z-]+="[^.]+")])/
+	<${M1} ${M3}>$0</${M1}>
+	
+# .class
+snippet class
+regex /^\s*/([a-z]+)?[.]([a-z-]+)/
+	<${M1?:div} class="${M2}">
+		$0
+	</${M1?:div}>
+
+snippet id
+regex /^\s*/([a-z]+)?[#]([a-z-]+)/
+	<${M1?:div} id="${M2}">
+		$0
+	</${M1?:div}>
+
+snippet classAttr
+regex /^\s*/([a-z]+)?[.]([a-z-]+)(\[([a-z-]+="[^.]+")])/
+	<${M1?:div} class="${M2}" ${M4}>
+		$0
+	</${M1?:div}>
+
+snippet idAttr
+regex /^\s*/([a-z]+)?[#]([a-z-]+)(\[([a-z-]+="[^.]+")])/
+	<${M1?:div} id="${M2}" ${M4}>
+		$0
+	</${M1?:div}>
+	
 snippet cfdump
-	<cfdump top="2" var="#${1:variable}#" />$0
+	<cfdump top="${2:2}" var="#${1:variable}#" />$0
 
 snippet cfloop
-	<cfloop array="#${1:array}#" item="#${2:item}#" ${3:index="${4:index}"}>
+	<cfloop array="#${1:array}#" item="${2:item}" ${3:index="${4:index}"}>
 		${5}
 	</cfloop>$0
 
 snippet cfrb
-	#$.slatwall.rbkey('${1:key}')#$0
+	$.slatwall.rbKey('${1:key}')
 
 snippet cfinc
-	<cfinclude template="{$1:filePath}" />$0
+	<cfinclude template="${1:filePath}" />$0
