@@ -1,7 +1,7 @@
 # Installation
 
 ```
-git clone https://github.com/stormten24/c9.snippets.git ~/.c9/plugins/c9.snippets
+git clone git@github.com:benjnse/c9.snippets.git ~/.c9/plugins/c9.snippets
 ```
 
 ## Add to AWS Init
