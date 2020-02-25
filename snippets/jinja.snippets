@@ -1,0 +1,43 @@
+# scope: html
+
+snippet jj
+	{% ${1} %}${0}
+
+snippet hh
+	{{ ${1} }}${0}
+
+snippet jextends
+	{% extends '${1}.html' %}${0}
+
+snippet jbl
+	{% block ${1} %}${2}{% endblock ${1} %}${0}
+
+snippet jurl
+	{{ url_for('${1}') }}${0}
+
+snippet jurlfor
+	{{ url_for('${1}', filename='${2}') }}${0}
+
+snippet jurlforstatic
+	{{ url_for('static', filename='${1}') }}${0}
+
+snippet jif
+	{% if ${1} %}
+		${2}
+	{% endif %}${0}
+
+snippet jifelse
+	{% if ${1} %}
+		${2}
+	{% else %}
+		${3}
+	{% endif %}${0}
+
+snippet jfor
+	{% for ${1} in ${2} %}
+		${3}
+	{% endfor %}${0}
+
+
+
+
